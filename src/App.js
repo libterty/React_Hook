@@ -4,6 +4,7 @@ import Joke from "./Joke";
 import Stories from "./Stories";
 import Tasks from "./Tasks";
 import Gallery from "./Gallery";
+import Matrix from "./Matrix";
 
 function App() {
   const [userQuery, setUserQuery] = useState(""); // '' means apply empty string to destructure syntax
@@ -25,7 +26,7 @@ function App() {
 
   const toggleShowGallery = () => {
     setShowGallery(!showGallery);
-  }
+  };
 
   return (
     <div className="App">
@@ -44,15 +45,15 @@ function App() {
       <Tasks />
       <hr />
       <div>
-        {
-          showGallery ? <Gallery/> : null
-        }
+        {showGallery ? <Gallery /> : null}
         <button onClick={toggleShowGallery}>
-          {showGallery ? 'Hide' : 'Show'} Gallery
+          {showGallery ? "Hide" : "Show"} Gallery
         </button>
       </div>
       <hr />
       <Stories />
+      <hr />
+      <Matrix />
     </div>
   );
 }
