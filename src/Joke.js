@@ -1,5 +1,3 @@
-"use Strict";
-
 import React from "react";
 import { useFetch } from "./hooks";
 
@@ -11,11 +9,11 @@ function Joke() {
 
   return (
     <div>
-      <h3> Joke of the session </h3> <p> {setup} </p>{" "}
+      <h3>Joke of the session</h3>
+      <p>{setup}</p>
       <p>
-        {" "}
-        <em> {punchline} </em>{" "}
-      </p>{" "}
+        <em>{punchline}</em>
+      </p>
     </div>
   );
 }

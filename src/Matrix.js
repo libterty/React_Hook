@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MATRIX_FRAMES from "./data/matrix";
-import { useDynamicTransition } from './hooks';
+import { useDynamicTransition } from "./hooks";
 
 const minimumDelay = 10;
 const minimumIncrement = 1;
@@ -10,8 +10,10 @@ function Matrix() {
   const [increment, setIncrement] = useState(5);
 
   const index = useDynamicTransition({
-      delay, increment, length: MATRIX_FRAMES.length
-  })
+    delay,
+    increment,
+    length: MATRIX_FRAMES.length
+  });
 
   const updateDelay = event => {
     const delay = Number(event.target.value);
@@ -22,7 +24,7 @@ function Matrix() {
   const updateIncrement = event => {
     const increment = Number(event.target.value);
 
-    setDelay(increment < minimumIncrement ? minimumIncrement : increment);
+    setIncrement(increment < minimumIncrement ? minimumIncrement : increment);
   };
 
   return (
